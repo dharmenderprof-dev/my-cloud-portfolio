@@ -1,32 +1,203 @@
->Core Skills & Labs</h2>
-        <ul>
-            <li><strong>Amazon Web Services (AWS):</strong> EC2, S3, IAM, Route 53, CloudWatch, Aut>
-            <li><strong>Systems Administration:</strong> Ubuntu Server, Apache Tomcat 10, Snap Pack>
-            <li><strong>Networking & Virtualization:</strong> pfSense Firewalls, Multi-ISP Architec>
-        </ul>
-    </section>
-</body>
-</html>
-             <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Cloud Portfolio</title>
-    <link rel="stylesheet" href="style.css">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Dharmender – System Administrator</title>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=IBM+Plex+Sans:wght@400;500&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#EDF1F4;--surface:#FFFFFF;--ink:#13222F;--muted:#4D6070;--line:#CBD5DD;--accent:#1B4FD6;--accent-ink:#FFFFFF;--signal:#E6A100;--term:#0E1A24;--term-ink:#D5E3EE;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0C151D;--surface:#142130;--ink:#E6EEF4;--muted:#9DB0BF;--line:#26384A;--accent:#6E9BFF;--accent-ink:#0C151D;--signal:#F2B52E;--term:#070D13;--term-ink:#D5E3EE}}
+:root[data-theme="dark"]{--bg:#0C151D;--surface:#142130;--ink:#E6EEF4;--muted:#9DB0BF;--line:#26384A;--accent:#6E9BFF;--accent-ink:#0C151D;--signal:#F2B52E;--term:#070D13;--term-ink:#D5E3EE}
+html{scroll-padding-top:calc(env(safe-area-inset-top,0px) + 64px);scroll-behavior:smooth}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.65 "IBM Plex Sans",system-ui,sans-serif}
+h1,h2,h3{font-family:"Bricolage Grotesque",system-ui,sans-serif;line-height:1.1;margin:0}
+a{color:var(--accent)}
+a:focus-visible,button:focus-visible,input:focus-visible{outline:3px solid var(--signal);outline-offset:2px}
+.wrap{max-width:1040px;margin:0 auto;padding:0 20px}
+header{position:sticky;top:0;z-index:20;background:var(--bg);border-bottom:1px solid var(--line);padding-top:env(safe-area-inset-top,0px)}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--bg);z-index:30}
+nav{display:flex;align-items:center;justify-content:space-between;gap:12px;height:58px}
+.logo{font:800 20px "Bricolage Grotesque",sans-serif;text-decoration:none;color:var(--ink)}
+.links{display:flex;gap:4px;align-items:center;overflow-x:auto}
+.links a{padding:8px 12px;text-decoration:none;color:var(--muted);font-weight:500;font-size:15px;white-space:nowrap;border-radius:6px}
+.links a:hover{color:var(--ink);background:var(--surface)}
+#theme{border:1px solid var(--line);background:var(--surface);color:var(--ink);border-radius:6px;padding:7px 11px;font:500 14px "IBM Plex Sans",sans-serif;cursor:pointer}
+section{padding:72px 0 8px}
+h2{font-size:clamp(28px,4.5vw,40px);margin-bottom:28px}
+.hero{padding-top:56px;display:grid;gap:36px;grid-template-columns:1.05fr 1fr;align-items:center}
+.hero h1{font-size:clamp(44px,8vw,84px);font-weight:800;letter-spacing:-.02em}
+.role{font:500 clamp(18px,2.4vw,22px) "Bricolage Grotesque",sans-serif;color:var(--accent);margin:14px 0 18px}
+.hero p{color:var(--muted);max-width:52ch;margin:0 0 26px}
+.btns{display:flex;flex-wrap:wrap;gap:12px}
+.btn{display:inline-block;padding:12px 20px;border-radius:8px;font-weight:500;text-decoration:none;border:1.5px solid var(--accent)}
+.btn.p{background:var(--accent);color:var(--accent-ink)}
+.term{background:var(--term);color:var(--term-ink);border-radius:12px;font:400 14px/1.6 "IBM Plex Mono",ui-monospace,monospace;overflow:hidden;border:1px solid var(--line)}
+.bar{display:flex;gap:7px;padding:11px 14px;border-bottom:1px solid #223344}
+.bar i{width:11px;height:11px;border-radius:50%;background:#3A4D5E}
+.bar i:first-child{background:var(--signal)}
+#out{padding:14px 16px;height:260px;overflow-y:auto;white-space:pre-wrap;word-break:break-word}
+#out b{color:var(--signal);font-weight:500}
+.in{display:flex;gap:8px;padding:10px 16px 14px;border-top:1px solid #223344}
+.in span{color:var(--signal)}
+#cmd{flex:1;min-width:0;background:none;border:0;color:inherit;font:inherit;outline-offset:4px}
+.chips{display:flex;flex-wrap:wrap;gap:6px;padding:0 16px 14px}
+.chips button{background:#16293A;color:var(--term-ink);border:1px solid #2B4155;border-radius:20px;padding:4px 11px;font:inherit;font-size:13px;cursor:pointer}
+.about{display:grid;grid-template-columns:1.4fr 1fr;gap:32px}
+.stats{display:grid;gap:12px;align-content:start}
+.stat{background:var(--surface);border:1px solid var(--line);border-left:4px solid var(--signal);padding:14px 16px;border-radius:4px 10px 10px 4px}
+.stat strong{display:block;font:700 18px "Bricolage Grotesque",sans-serif}
+.stat span{color:var(--muted);font-size:15px}
+.skills{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:22px}
+.card h3{font-size:20px;margin-bottom:14px}
+.tags{display:flex;flex-wrap:wrap;gap:8px;padding:0;margin:0;list-style:none}
+.tags li{font-size:14px;padding:4px 11px;border:1px solid var(--line);border-radius:6px;background:var(--bg)}
+.tl{border-left:2px solid var(--line);margin-left:6px;padding-left:26px;display:grid;gap:34px}
+.job{position:relative}
+.job::before{content:"";position:absolute;left:-35px;top:8px;width:14px;height:14px;border-radius:50%;background:var(--accent);border:3px solid var(--bg)}
+.job h3{font-size:23px}
+.meta{color:var(--muted);font-size:15px;margin:4px 0 12px}
+.job ul{margin:0;padding-left:20px;max-width:75ch}
+.job li{margin-bottom:8px}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.contact{background:var(--ink);color:var(--bg);border-radius:14px;padding:clamp(28px,6vw,56px);margin-bottom:60px}
+.contact h2{margin-bottom:12px}
+.contact p{margin:0 0 24px;max-width:50ch;opacity:.85}
+.contact .btn{border-color:var(--bg);color:var(--bg)}
+.contact .btn.p{background:var(--signal);border-color:var(--signal);color:#13222F}
+footer{border-top:1px solid var(--line);padding:22px 0 30px;color:var(--muted);font-size:14px}
+@media (max-width:820px){.hero,.about,.two{grid-template-columns:1fr}.links a{padding:8px 9px}}
+@media (max-width:520px){body{font-size:16px}section{padding-top:56px}.logo{display:none}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
 </head>
 <body>
-    <header>
-        <h1>Welcome to My Cloud & Infrastructure Portfolio</h1>
-        <p>Aspiring Cloud Engineer | Linux & AWS Practitioner</p>
-    </header>
-    <section class="content">
-        <h2>Core Skills & Labs</h2>
-        <ul>
-            <li><strong>Amazon Web Services (AWS):</strong> EC2, S3, IAM, Route 53, CloudWatch, Auto Scaling</li>
-            <li><strong>Systems Administration:</strong> Ubuntu Server, Apache Tomcat 10, Snap Packages</li>
-            <li><strong>Networking & Virtualization:</strong> pfSense Firewalls, Multi-ISP Architectures, Oracle VirtualBox</li>
-        </ul>
-    </section>
+<header><div class="wrap"><nav>
+<a class="logo" href="#top">Dharmender</a>
+<div class="links"><a href="#about">About</a><a href="#skills">Skills</a><a href="#experience">Experience</a><a href="#credentials">Credentials</a><a href="#contact">Contact</a></div>
+<button id="theme" type="button" aria-label="Switch colour theme">Theme</button>
+</nav></div></header>
+
+<main class="wrap" id="top">
+<div class="hero">
+<div>
+<h1>Dharmender</h1>
+<div class="role">System Administrator &amp; IT Engineer</div>
+<p>I keep Windows Server and Linux environments running, manage Active Directory, and write Bash scripts that turn repeat installs into one command. CCNA and CEH v12 certified.</p>
+<div class="btns"><a class="btn p" href="#contact">Get in touch</a><a class="btn" href="#experience">See my experience</a></div>
+</div>
+<div class="term" aria-label="Interactive terminal">
+<div class="bar"><i></i><i></i><i></i></div>
+<div id="out" role="log" aria-live="polite"></div>
+<div class="in"><span>$</span><input id="cmd" type="text" autocomplete="off" autocapitalize="off" spellcheck="false" aria-label="Type a command" placeholder="type help"></div>
+<div class="chips"><button type="button" data-c="whoami">whoami</button><button type="button" data-c="skills">skills</button><button type="button" data-c="certs">certs</button><button type="button" data-c="contact">contact</button></div>
+</div>
+</div>
+
+<section id="about">
+<h2>About</h2>
+<div class="about">
+<div>
+<p>I'm a system administrator at Elcamino Software in Gurugram. My day-to-day covers Windows Server 2019/2022 and Linux (Ubuntu and Red Hat) servers, user accounts and permissions in Active Directory, patch updates, and scheduled local and cloud backups, all within company SLA response times.</p>
+<p>I like removing manual work. I wrote custom Bash scripts that install VNC remote access on client systems automatically, so setup is the same every time.</p>
+<p>I hold a BCA from Gateway Institute of Engineering and Technology (DCRUST University) and back it with hands-on networking and security training.</p>
+</div>
+<div class="stats">
+<div class="stat"><strong>Windows &amp; Linux</strong><span>Server 2019/2022, Ubuntu, Red Hat</span></div>
+<div class="stat"><strong>2 certifications</strong><span>CCNA 200-301 and CEH v12</span></div>
+<div class="stat"><strong>Bash automation</strong><span>Automated VNC deployment</span></div>
+</div>
+</div>
+</section>
+
+<section id="skills">
+<h2>Skills</h2>
+<div class="skills">
+<div class="card"><h3>Operating systems</h3><ul class="tags"><li>Windows Server 2019/2022</li><li>Ubuntu</li><li>Red Hat</li><li>Active Directory</li><li>Group Policy</li><li>User permissions</li></ul></div>
+<div class="card"><h3>Automation</h3><ul class="tags"><li>Bash scripting</li><li>Shell automation</li><li>Automated VNC deployment</li><li>Software install scripts</li></ul></div>
+<div class="card"><h3>Networking and security</h3><ul class="tags"><li>TCP/IP</li><li>IPv4/IPv6</li><li>VLANs</li><li>NAT/PAT</li><li>ACLs</li><li>Firewall rules</li><li>VPN access</li></ul></div>
+<div class="card"><h3>Operations and cloud</h3><ul class="tags"><li>SLA compliance</li><li>Cloud backups</li><li>System monitoring</li><li>IT asset tracking</li><li>Hardware provisioning</li></ul></div>
+<div class="card"><h3>Tools</h3><ul class="tags"><li>Cisco routers and switches</li><li>Wireshark</li><li>PuTTY</li><li>GNS3</li><li>Packet Tracer</li><li>MS Office</li></ul></div>
+</div>
+</section>
+
+<section id="experience">
+<h2>Experience</h2>
+<div class="tl">
+<div class="job">
+<h3>System Administrator</h3>
+<div class="meta">Elcamino Software Pvt Ltd, Gurugram · Dec 2025 to present</div>
+<ul>
+<li>Administer Windows Server (2019/2022) and Linux servers for daily business operations, within internal SLA response times.</li>
+<li>Wrote Bash/Shell scripts that automate software setups, including VNC remote access installs on client systems.</li>
+<li>Manage Active Directory: account creation, password resets, access permissions and patch updates.</li>
+<li>Apply firewall port rules, monitor user access and maintain user VPN connections.</li>
+<li>Run scheduled local and cloud backups to support recovery and prevent data loss.</li>
+</ul>
+</div>
+<div class="job">
+<h3>IT Intern</h3>
+<div class="meta">Magneto Cleantech Pvt Ltd, Delhi · Oct 2025 to Dec 2025</div>
+<ul>
+<li>Maintained, provisioned and benchmarked workstations, servers and network endpoints across offices.</li>
+<li>Supported senior IT staff with asset audits, software licence management and basic security policies.</li>
+<li>Ran regular system health checks and routine data backups.</li>
+</ul>
+</div>
+</div>
+</section>
+
+<section id="credentials">
+<h2>Credentials</h2>
+<div class="two">
+<div class="card"><h3>Certifications</h3>
+<p style="margin:0 0 10px"><strong>CCNA 200-301</strong><br><span style="color:var(--muted)">Cisco Certified Network Associate · Network Bulls</span></p>
+<p style="margin:0"><strong>CEH v12</strong><br><span style="color:var(--muted)">Certified Ethical Hacker · EC-Council</span></p></div>
+<div class="card"><h3>Education</h3>
+<p style="margin:0"><strong>Bachelor of Computer Applications (BCA)</strong><br><span style="color:var(--muted)">Gateway Institute of Engineering and Technology (DCRUST University)<br>Aug 2022 to Aug 2025</span></p></div>
+</div>
+</section>
+
+<section id="contact">
+<div class="contact">
+<h2>Let's talk</h2>
+<p>Looking for a system administrator or IT engineer? Email me or call, and I'll reply as soon as I can.</p>
+<div class="btns"><a class="btn p" href="mailto:dharmender.prof@gmail.com">Email me</a><a class="btn" href="tel:+918168655881">+91 81686 55881</a><a class="btn" href="https://linkedin.com/in/dharmenderr" target="_blank" rel="noopener">LinkedIn</a></div>
+</div>
+</section>
+</main>
+<footer><div class="wrap">© 2026 Dharmender · Delhi, India</div></footer>
+
+<script>
+(function(){
+var out=document.getElementById('out'),cmd=document.getElementById('cmd');
+var R={
+help:"Commands: <b>whoami</b>, <b>skills</b>, <b>certs</b>, <b>experience</b>, <b>contact</b>, <b>clear</b>",
+whoami:"Dharmender\nSystem Administrator, Elcamino Software (Gurugram)\nWindows Server · Linux · Active Directory",
+skills:"os:         Windows Server 2019/2022, Ubuntu, Red Hat, AD, GPO\nautomation: Bash, shell scripts, automated VNC deployment\nnetwork:    TCP/IP, VLANs, NAT/PAT, ACLs, firewall, VPN\ntools:      Cisco, Wireshark, PuTTY, GNS3, Packet Tracer",
+certs:"CCNA 200-301 (Network Bulls)\nCEH v12 (EC-Council)",
+experience:"Dec 2025 to now   System Administrator, Elcamino Software\nOct 2025 to Dec   IT Intern, Magneto Cleantech",
+contact:"dharmender.prof@gmail.com\n+91 81686 55881\nlinkedin.com/in/dharmenderr"
+};
+function add(h){var d=document.createElement('div');d.innerHTML=h;out.appendChild(d);out.scrollTop=out.scrollHeight}
+function run(c){
+c=c.trim().toLowerCase();if(!c)return;
+if(c==='clear'){out.innerHTML='';return}
+add('<b>$</b> '+c.replace(/</g,'&lt;'));
+add(R[c]||('command not found: '+c.replace(/</g,'&lt;')+'. Type <b>help</b>.'));
+}
+add(R.help);
+cmd.addEventListener('keydown',function(e){if(e.key==='Enter'){run(cmd.value);cmd.value=''}});
+document.querySelectorAll('.chips button').forEach(function(b){b.addEventListener('click',function(){run(b.dataset.c)})});
+var t=document.getElementById('theme'),root=document.documentElement;
+t.addEventListener('click',function(){
+var dark=root.dataset.theme?root.dataset.theme==='dark':matchMedia('(prefers-color-scheme:dark)').matches;
+root.dataset.theme=dark?'light':'dark';
+});
+})();
+</script>
 </body>
 </html>
