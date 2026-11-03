@@ -1,0 +1,22 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 40px;
+    background-color: #f4f6f9;
+    color: #333;
+}
+header {
+    background: #232f3e; /* AWS Dark Blue */
+    color: #ff9900; /* AWS Orange */
+    padding: 20px;
+    text-align: center;
+    border-radius: 5px;
+}
+.content {
+    background: #fff;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
